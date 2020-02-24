@@ -1,0 +1,6 @@
+name: Management System User Registration Configurations
+description: Use this module for creating Registration Page configurations and settings
+core: 8.x
+type: module
+package: ManagementSystem
+version: 1.x
