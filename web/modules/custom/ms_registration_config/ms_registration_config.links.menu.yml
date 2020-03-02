@@ -1,0 +1,14 @@
+
+# Employee Designation menu items definition
+entity.emp_designation_entity.collection:
+  title: 'Employee Designation list'
+  route_name: entity.emp_designation_entity.collection
+  description: 'List Employee Designation entities'
+  parent: system.admin_structure
+  weight: 100
+
+emp_designation_entity.admin.structure.settings:
+  title: 'Employee Designation settings'
+  description: 'Configure Employee Designation entities'
+  route_name: emp_designation_entity.settings
+  parent: system.admin_structure
