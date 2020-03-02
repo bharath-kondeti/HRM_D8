@@ -1,0 +1,5 @@
+entity.emp_designation_entity.add_form:
+  route_name: entity.emp_designation_entity.add_form
+  title: 'Add Employee Designation'
+  appears_on:
+    - entity.emp_designation_entity.collection

@@ -1,0 +1,22 @@
+{#
+/**
+ * @file emp_designation_entity.html.twig
+ * Default theme implementation to present Employee Designation data.
+ *
+ * This template is used when viewing Employee Designation pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_emp_designation_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('emp_designation_entity') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

@@ -1,0 +1,5 @@
+name: 'Management Systems Registration Configurations'
+type: module
+description: 'This module consists of configurations related to registration page'
+core: 8.x
+package: 'Management System'
