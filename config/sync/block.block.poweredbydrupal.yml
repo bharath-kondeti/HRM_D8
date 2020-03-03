@@ -1,0 +1,25 @@
+uuid: 37c3c671-7a3b-4192-9bab-5d15f31ad966
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hrmtheme
+id: poweredbydrupal
+theme: hrmtheme
+region: content_bottom
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

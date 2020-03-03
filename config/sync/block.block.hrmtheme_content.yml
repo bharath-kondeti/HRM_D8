@@ -1,0 +1,22 @@
+uuid: e31ca30d-15bd-44cf-a7d1-c3384fae6167
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hrmtheme
+_core:
+  default_config_hash: EeWmb_sxMht5AUZ4Sv5BqmN6SEQysygbDyN0R1v9m2Q
+id: hrmtheme_content
+theme: hrmtheme
+region: content
+weight: 2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

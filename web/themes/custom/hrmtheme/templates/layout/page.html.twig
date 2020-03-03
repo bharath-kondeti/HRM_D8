@@ -1,0 +1,332 @@
+{#
+/**
+ * @file
+ * HRM's theme implementation to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template in this directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ * - logo: The url of the logo image, as defined in theme settings.
+ * - site_name: The name of the site. This is empty when displaying the site
+ *   name has been disabled in the theme settings.
+ * - site_slogan: The slogan of the site. This is empty when displaying the site
+ *   slogan has been disabled in theme settings.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - messages: Status and error messages. Should be displayed prominently.
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.header: Items for the Header region.
+ * - page.primary_menu: Items for the Primary Menu navigation region.
+ * - page.page_title: Region for the current page title.
+ * - page.slideshow: Items for the Slideshow region.
+ * - page.promo: Items for the promo region.
+ * - page.highlighted: Items for the Highlighted region.
+ * - page.content_top: Items for the Content Top region.
+ * - page.help: Items for the Help region.
+ * - page.breadcrumb: Items for the Breadcrumb region.
+ * - page.search: The search region.
+ * - page.content: Main content of the current page.
+ * - page.sidebar_first: Items for the Left sidebar region.
+ * - page.sidebar_second: Items for the Right sidebar region.
+ * - page.content_bottom: Items for the Content Bottom region.
+ * - page.footer_top_one: Items for the Footer Top Widget - One region.
+ * - page.footer_top_two: Items for the Footer Top Widget - Two region.
+ * - page.footer_top_three: Items for the Footer Top Widget - Three region.
+ * - page.footer_top_four: Items for the Footer Top Widget - Four region.
+ * - page.footer: Items for the Footer region.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ *
+ * @ingroup themeable
+ */
+#}
+
+<!-- Header and Navbar -->
+<header class="main-header">
+  <nav class="navbar topnav navbar-default" role="navigation">
+    <div class="container">
+      <div class="row">
+      <div class="navbar-header col-md-3">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        {% if page.header %}
+          {{ page.header }}
+        {% endif %}
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-md-9">
+        {% if page.primary_menu %}
+          {{ page.primary_menu }}
+        {% endif %}      
+      </div>
+      <!--End Navigation -->
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  {% if is_front and page.slideshow %}  
+  <div id="slideshow-wrapper">
+    <div class="container slideshow">
+      <div class="row">
+        <div class="col-md-12">
+            {{ page.slideshow }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <!-- End Banner -->
+
+</header>
+<!--End Header & Navbar -->
+
+
+<!--Search-->
+  {% if is_front and page.search %}
+    {{ page.search }}
+  {% endif %}
+<!--End Search-->
+
+
+<!--Home page banner-->
+  {% if is_front and page.promo %}
+  <div class="promo-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{ page.promo }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+<!--End Home page banner-->
+
+
+<!--Highlighted-->
+  {% if page.highlighted %}
+  <div class="highlighted-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{ page.highlighted }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+<!--End Highlighted-->
+
+<!--Help-->
+  {% if page.help %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{ page.help }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+<!--End Help-->
+
+<!-- Page Title -->
+{%  if page.page_title and not is_front %}
+  <div id="page-title">
+    <div id="page-title-inner">
+      <!-- start: Container -->
+      <div class="container-fluid">
+        {{ page.page_title }}
+      </div>
+    </div>
+  </div>
+{% endif %}
+<!-- End Page Title -->
+
+
+<!-- layout -->
+<div id="wrapper">
+  <!-- start: Container -->
+  <div class="container-fluid">
+    
+    <!--Start Content Top-->
+    {% if page.content_top %}
+    <div class="content-top-wrapper">
+    <div class="content-top">
+        <div class="row">
+		  <div class="col-md-12">
+            {{ page.content_top }}
+		  </div>
+        </div>
+	</div>
+</div>
+    {% endif %}
+    <!--End Content Top-->
+    
+    <!--start:Breadcrumbs -->
+	{%  if not is_front %}
+    <div class="row">
+      <div class="col-md-12">{{ page.breadcrumb }}</div>
+    </div>
+	{% endif %}
+    <!--End Breadcrumbs-->
+	
+    <div class="region-content-wrapper">
+    <div class="row region-content">
+      <!--- Start Left Sidebar -->
+      {% if page.sidebar_first %}
+          <div class = "{{sidebarfirst}} sidebar-first">
+            {{ page.sidebar_first }}
+          </div>
+      {% endif %}
+      <!---End Left Sidebar -->
+
+      <!--- Start content -->
+      {% if page.content %}
+          <div class="{{contentlayout}} content-layout">
+            {{ page.content }}
+          </div>
+      {% endif %}
+      <!---End content -->
+
+      <!--- Start Right Sidebar -->
+      {% if page.sidebar_second %}
+          <div class="{{sidebarsecond}} sidebar-second">
+            {{ page.sidebar_second }}
+          </div>
+
+      {% endif %}
+      <!---End Right Sidebar -->
+      
+    </div>
+  </div>
+    <!--End Content -->
+
+    <!--Start Content Bottom-->
+    {% if page.content_bottom %}
+    <div class="content-bottom-wrapper">
+    <div class="content-bottom">
+        <div class="row">
+		  <div class="col-md-12">
+            {{ page.content_bottom }}
+		  </div>
+        </div>
+	</div>
+</div>
+    {% endif %}
+    <!--End Content Bottom-->
+  </div>
+</div>
+<!-- End layout -->
+
+<!-- Start Footer -->
+  {% if page.footer_top_one or page.footer_top_two or page.footer_top_three or page.footer_top_four %}
+    <div class="footer-widgets-wrapper">
+    <div class="footer-widgets">
+      <!-- Start Container -->
+      <div class="container">
+        
+        <div class="row">
+
+          <!-- Start Footer Top One Region -->
+          
+          {% if page.footer_top_one %}
+            <div class = {{ footer_top_class }}>
+              {{ page.footer_top_one }}
+            </div>
+          {% endif %}
+          
+          <!-- End Footer Top One Region -->
+
+          <!-- Start Footer Top Two Region -->
+          {% if page.footer_top_two %}
+            <div class = {{ footer_top_class }}>
+              {{ page.footer_top_two }}
+            </div>
+          {% endif %}
+          
+          <!-- End Footer Top Two Region -->
+
+          <!-- Start Footer Top Three Region -->
+          
+          {% if page.footer_top_three %}
+            <div class = {{ footer_top_class }}>
+              {{ page.footer_top_three }}
+            </div>
+          {% endif %}
+          
+          <!-- End Footer Top Three Region -->
+		  
+		  <!-- Start Footer Top Four Region -->
+
+          {% if page.footer_top_four %}
+          <div class = {{ footer_top_class }}>
+            {{ page.footer_top_four }}
+          </div>
+          {% endif %}
+		  
+		  <!-- End Footer Top Four Region -->
+
+        </div>
+      </div>
+    </div>
+    </div>
+  {% endif %}
+  <!-- Footer Region-->
+  {% if page.footer %}
+  <div class="footer-space-wrapper">
+    <div class="footer-space">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            {{ page.footer }}
+          </div>
+      </div>
+      </div>
+	</div>
+</div>
+  {% endif %}
+  <!-- End Footer Region-->
+<!--End Footer -->
+
+<!-- #footer-bottom -->
+<div class="footer-bottom-wrapper">
+<div id="footer-bottom">
+  <div class="container">
+    <div class="row">
+      <hr class="style-hrm">
+      <div id="toTop" class="col-md-12">
+        <a class="scrollUp"><i class="fa fa-angle-up"></i></a>
+      </div>
+    </div>
+    <div class="row">
+		  </div>
+    </div>
+</div>
+</div>
+<!-- #footer-bottom ends here -->

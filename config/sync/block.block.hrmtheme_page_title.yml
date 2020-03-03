@@ -1,0 +1,20 @@
+uuid: a952f757-8f3c-464b-9085-da5dc1ac6988
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hrmtheme
+_core:
+  default_config_hash: 69fuF9grAUm8P_vM2D6F9sVjkdkAEmkONyCoXX6aK-I
+id: hrmtheme_page_title
+theme: hrmtheme
+region: page_title
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 779bce93-bd6d-4a06-95c4-f5e4b9ea0d15
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hrmtheme
+_core:
+  default_config_hash: dsfPQKUnIgRy5-QL-Yxc4HMSDWIzzIpt8_l1N4-5qpo
+id: hrmtheme_powered
+theme: hrmtheme
+region: optional_blocks
+weight: 2
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

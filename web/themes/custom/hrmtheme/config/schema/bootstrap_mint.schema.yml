@@ -1,0 +1,5 @@
+# Schema for configuration files of the HRM theme.
+
+hrmtheme.settings:
+  type: theme_settings
+  label: 'HRM Theme settings'

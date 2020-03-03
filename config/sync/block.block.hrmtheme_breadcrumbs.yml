@@ -1,0 +1,22 @@
+uuid: 7715fdce-722e-48c4-b7d8-9a3c7aec598d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hrmtheme
+_core:
+  default_config_hash: nYYGfauAzw58EG01CmjjjXaOLaUrDssKqYdz2kySpFo
+id: hrmtheme_breadcrumbs
+theme: hrmtheme
+region: breadcrumb
+weight: -100
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

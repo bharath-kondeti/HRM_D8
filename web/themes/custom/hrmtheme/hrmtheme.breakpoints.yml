@@ -1,0 +1,24 @@
+hrmtheme.xtrasmall:
+  label: Extra Small
+  mediaQuery: 'all and (max-width: 767px)'
+  weight: 0
+  multipliers:
+    - 1x
+hrmtheme.small:
+  label: Small
+  mediaQuery: 'all and (min-width: 768px)'
+  weight: 1
+  multipliers:
+    - 1x
+hrmtheme.medium:
+  label: Medium
+  mediaQuery: 'all and (min-width: 992px)'
+  weight: 2
+  multipliers:
+    - 1x
+hrmtheme.large:
+  label: Large
+  mediaQuery: 'all and (min-width: 1200px)'
+  weight: 3
+  multipliers:
+    - 1x

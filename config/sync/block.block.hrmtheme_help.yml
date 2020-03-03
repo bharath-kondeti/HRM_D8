@@ -1,0 +1,22 @@
+uuid: 247bff15-0c08-40dc-a558-9f697468c4cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - hrmtheme
+_core:
+  default_config_hash: IS3tBcicPosql19f8AUvLhXKM23li6PBYqFVGj09mWw
+id: hrmtheme_help
+theme: hrmtheme
+region: help
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

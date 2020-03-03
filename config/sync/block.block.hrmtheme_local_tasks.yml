@@ -1,0 +1,22 @@
+uuid: 53261395-8d39-463d-a6a3-3f78fe33214e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hrmtheme
+_core:
+  default_config_hash: OMgKEp0Yk1enWE4pKZlb8kFxKPwmWQdIFvinHySdjdA
+id: hrmtheme_local_tasks
+theme: hrmtheme
+region: content
+weight: 1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
