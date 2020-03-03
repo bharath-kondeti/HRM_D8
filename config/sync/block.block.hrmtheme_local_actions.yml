@@ -1,0 +1,20 @@
+uuid: fe3654f9-84d9-43cd-a467-1295571fb0da
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hrmtheme
+_core:
+  default_config_hash: iphjT87SnPUmDbC9i_ki8CoQp7jyauQZMrs4W-zXni8
+id: hrmtheme_local_actions
+theme: hrmtheme
+region: optional_blocks
+weight: 1
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

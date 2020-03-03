@@ -1,0 +1,23 @@
+uuid: e5ed79e3-fd38-4634-8da9-b1d65a244954
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - hrmtheme
+_core:
+  default_config_hash: ppKDB9YH_bRM9aR-6IbZfeBySD0Bfo3IFEK81hjuRVg
+id: hrmtheme_search
+theme: hrmtheme
+region: search
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+  page_id: ''
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: f433a321-890a-4fe8-8fc5-7c2778e0ea99
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - hrmtheme
+_core:
+  default_config_hash: 12hurPeBwPO-w0X81TqXfXUBjR5lO5VzrQWQZO3eZMU
+id: hrmtheme_tools
+theme: hrmtheme
+region: optional_blocks
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 990b7504-6621-49b4-982a-fe1d7309eabd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hrmtheme
+_core:
+  default_config_hash: D2azqtx8N0HB1VEqLq8DiHHCM1dcIexkzF__6ctXBzs
+id: hrmtheme_messages
+theme: hrmtheme
+region: highlighted
+weight: -50
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,74 @@
+bootstrap:
+  remote: http://getbootstrap.com/
+  version: 3.3.7
+  license:
+    name: MIT
+    url: https://github.com/twbs/bootstrap/blob/master/LICENSE
+    gpl-compatible: false
+  css:
+    theme:
+      https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css: { type: external, minified: true }
+  js:
+    https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js: { type: external, minified: true }
+
+googlefonts-exo2:
+  remote: https://www.google.com/fonts
+  version: VERSION
+  license:
+    name: SIL OFL
+    url: https://www.google.com/fonts#AboutPlace:about
+    gpl-compatible: true
+  css:
+    theme:
+      https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i: {}
+
+font-awesome:
+  remote: http://fontawesome.io/
+  version: 4.7.0
+  license:
+    name: MIT
+    url: http://fontawesome.io/license/
+    gpl-compatible: true
+  css:
+    theme:
+      https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css: { type: external, minified: true }
+
+smart-menus:
+  remote: http://www.smartmenus.org/
+  version: 1.1.0
+  license:
+    name: MIT
+    url: https://github.com/vadikom/smartmenus/blob/master/LICENSE-MIT
+    gpl-compatible: false
+  css:
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/jquery.smartmenus/1.1.0/css/sm-core-css.css: { type: external, minified: false }
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/jquery.smartmenus/1.1.0/jquery.smartmenus.min.js: { type: external, minified: true }
+
+global-components:
+  Version: VERSION
+  css:
+    theme:
+      css/base.css: {}
+      css/style.css: {}
+      css/media.css: {}
+  js:
+    js/hrmtheme.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+
+maintenance-page:
+  version: VERSION
+  css:
+    theme:
+      css/maintenance-page.css: {}
+  dependencies:
+    - system/maintenance
+    - hrmtheme/googlefonts-exo2
+    - hrmtheme/bootstrap
+    - hrmtheme/global-components

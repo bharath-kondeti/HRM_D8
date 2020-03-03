@@ -1,0 +1,35 @@
+uuid: 6ffbdf9d-f5ca-43a1-ace7-4b7e860b3d73
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1ff69c32-f045-47d0-9150-51cf7cfd0072'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - hrmtheme
+third_party_settings:
+  block_class:
+    classes: class-testing
+id: blockplaceholder
+theme: hrmtheme
+region: content_bottom
+weight: 0
+provider: null
+plugin: 'block_content:1ff69c32-f045-47d0-9150-51cf7cfd0072'
+settings:
+  id: 'block_content:1ff69c32-f045-47d0-9150-51cf7cfd0072'
+  label: 'Block placeholder'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
