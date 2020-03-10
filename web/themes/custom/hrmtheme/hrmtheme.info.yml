@@ -17,9 +17,9 @@ libraries:
 regions:
   header: 'Header'
   primary_menu: 'Primary Menu'
+  banner: 'Banner'
   slideshow: 'Slideshow'
   search: 'Search'
-  promo: 'Promotion Banner'
   highlighted: 'Highlighted'
   help: 'Help' 
   content_top: 'Content Top'

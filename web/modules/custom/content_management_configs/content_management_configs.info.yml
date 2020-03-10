@@ -1,0 +1,5 @@
+name: Content Management Configurations
+description: All contents related configurations page.
+core: 8.x
+package: Custom
+type: module

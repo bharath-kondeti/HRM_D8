@@ -7,16 +7,59 @@ body {
   font-weight: 300;
 }
 
+/* Reusable style */
 .container {
-  width: 1400px;
-  max-width: 1200px;
+ /* width: 1400px;
+  max-width: 1200px;*/
 }
 
 header .container {
+  width: 100%;
+}
+
+header .row {
+  padding: 15px 0;
+}
+
+/* colors */
+.white {
+  color: #fff;
+}
+
+.blue {
+  color: #007eff;
+}
+
+.w1340 {
+  width: 100%;
   max-width: 1340px;
+  margin: 0 auto;
+}
+
+.w1200 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bg-wheat {
+  background-color: #f8f9fa; 
+}
+
+.bg-blue {
+  background-color: #007eff;
+}
+
+.font-wheat {
+  color: #adb5bd;
+}
+
+.font-blue {
+  color: #007bff;
 }
 
 
+/* Basic styles */
 p {
   margin: 0 0 20px 0;
 }
@@ -36,13 +79,13 @@ h2,
 h3,
 .h3 {
   font-size: 15px;
-  color: #000;
+  color: #007eff;
 }
 
 h4,
 .h4 {
   font-size: 14px;
-  color: #000;
+  color: #007eff;
 }
 
 img {
@@ -51,11 +94,12 @@ img {
 }
 
 a {
-  color: #007bff;
+  color: #007eff;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #00614e;
+  color: #007eff;
   text-decoration: none;
 }
 
@@ -84,25 +128,64 @@ ul.links.inline li {
   text-transform: uppercase;
 }
 
-.main-header {
+.front-page .main-header {
   background-size: cover;
   position: relative;
   background-color: #fefefe;
-  padding-top: 10px; 
+  min-height: 800px;
 }
 
-.main-header nav {
+.front-page .main-header:before {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(89, 89, 89, 0.9);
+}
+
+.front-page .main-header:after {
+  content: "";
   background: #fff;
+  height: 200px;
+  -webkit-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  transform: skewY(-5deg);
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+  right: 0;
+  z-index: 1;
+}
+
+.main-header nav.navigation {
   border: 0;
   margin: 0;
   position: relative;
   z-index: 200;
   min-height: auto;
+  padding: 8px 0;
 }
 
-.main-header .region {
+.main-header ul.menu {
+  margin: 0;
+}
+
+.main-header ul.menu a {
+  font-size: 16px;
+  color: rgba(255,255,255,.7);
+}
+
+.main-header ul.menu a.is-active {
+  color: #fff;
+}
+
+.region.region-header {
   position: relative;
   z-index: 2;
+  padding: 10px 0;
 }
 
 .main-header .block {
@@ -116,6 +199,7 @@ ul.links.inline li {
 }
 
 .site-logo {
+  display: none;
   margin-right: 15px; 
 }
 
@@ -131,9 +215,9 @@ ul.links.inline li {
 }
 
 .site-name a {
-  font-size: 18px;
+  font-size: 26px;
   font-weight: 500;
-  color: #007bff;
+  color: #fff;
 }
 
 .region-header .site-branding__slogan {
@@ -141,39 +225,70 @@ ul.links.inline li {
   color: #007bff;
 }
 
-/*Banner*/
-
-.slideshow {
-  text-align: center;
-  line-height: 160%;
+/* Banner */
+.region-banner {
+  position: relative;
+  z-index: 3;
 }
 
-.slideshow h2 {
+.home-banner {
+  margin: 25% 0 0 25%;
+}
+
+.home-banner .sub-heading {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #007eff;
+}
+
+.home-banner .title {
   font-size: 30px;
+  margin-bottom: 20px;
   font-weight: bold;
   color: #fff;
 }
 
-
-/*Promo*/
-
-.region-promo {
-  border: 1px solid #e9e8ed;
-  padding: 15px;
+.home-banner .description {
   font-size: 16px;
-  text-align: center;
-  margin: 20px 0;
-  background: #fdfdfd;
+  color: #ccc;
+  margin-bottom: 20px;
 }
 
-.region-promo h2 {
-  margin: 5px 0;
+.btn-large {
+  background: #007eff;
+  padding: 10px 20px;
+  position: relative;
+  display: inline-block;
+  border-radius: 20px;
+  color: #fff;
+}
+    
+
+/* Content */
+.front-page #main-content-wrapper {
+  position: relative;
+  z-index: 3;
 }
 
-.region-promo p,
-.region-promo .block {
-  margin: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Sidebar Blocks*/
 
@@ -326,6 +441,10 @@ input[type="submit"]:hover {
 }
 
 /*Menu*/
+.navbar-default {
+  background: transparent;
+  border: none;
+}
 
 .navbar-default .navbar-toggle {
   margin-right: 0;
@@ -538,38 +657,4 @@ nav h2 {
   font-style: italic;
 }
 
-/*Comment*/
-
-.comment-wrap {
-  overflow: hidden;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #f5f5f5;
-}
-
-.comment-wrap .author-details {
-  float: left;
-  width: 20%;
-}
-
-.comment-wrap .author-comments {
-  padding-left: 5px;
-  float: left;
-  width: 80%;
-}
-
-.comment-submitted {
-  margin: 3px 0;
-  font-size: 12px;
-  display: inline-block;
-  line-height: 100%;
-}
-
-.comment-wrap .author-comments h3 {
-  margin-top: 10px;
-}
-
-.comment-wrap .author-comments p {
-  margin-bottom: 10px;
-}
 

@@ -1,0 +1,7 @@
+content_management.form:
+ path: '/admin/hrm-dashboard/content_management'
+ defaults:
+   _title: 'Content Management Configurations'
+   _form: '\Drupal\content_management_configs\Form\contentManagementForm'
+ requirements:
+   _permission: 'access content'
