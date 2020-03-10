@@ -5,3 +5,4 @@ content_management.form:
    _form: '\Drupal\content_management_configs\Form\contentManagementForm'
  requirements:
    _permission: 'access content'
+   
