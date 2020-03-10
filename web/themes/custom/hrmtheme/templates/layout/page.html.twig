@@ -61,31 +61,38 @@
 #}
 
 <!-- Header and Navbar -->
-<header class="main-header">
+<header class="main-header" 
+  {% if is_front %}
+    style="background: url('{{ home_banner_bg }}'); background-size: cover;"
+  {% endif %}
+>
   <nav class="navbar topnav navbar-default" role="navigation">
     <div class="container">
       <div class="row">
-      <div class="navbar-header col-md-3">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        {% if page.header %}
-          {{ page.header }}
+        <div class="w1340">
+          <div class="navbar-header col-md-5">
+            {% if page.header %}
+              {{ page.header }}
+            {% endif %}
+          </div>
+
+          <!-- Navigation -->
+          <div class="col-md-7">
+            {% if page.primary_menu %}
+              {{ page.primary_menu }}
+            {% endif %}      
+          </div>
+        </div>
+        <!--End Navigation -->
+      </div>
+
+      <!-- Banner -->
+      <div class="row region-banner">
+        {% if page.banner %}
+          {{ page.banner }}
         {% endif %}
       </div>
 
-      <!-- Navigation -->
-      <div class="col-md-9">
-        {% if page.primary_menu %}
-          {{ page.primary_menu }}
-        {% endif %}      
-      </div>
-      <!--End Navigation -->
-
-      </div>
     </div>
   </nav>
 
@@ -114,21 +121,6 @@
 <!--End Search-->
 
 
-<!--Home page banner-->
-  {% if is_front and page.promo %}
-  <div class="promo-wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          {{ page.promo }}
-        </div>
-      </div>
-    </div>
-  </div>
-  {% endif %}
-<!--End Home page banner-->
-
-
 <!--Highlighted-->
   {% if page.highlighted %}
   <div class="highlighted-wrapper">
@@ -142,7 +134,7 @@
   </div>
   {% endif %}
 <!--End Highlighted-->
-
+{{ example_value1 }}
 <!--Help-->
   {% if page.help %}
     <div class="container">
@@ -170,7 +162,7 @@
 
 
 <!-- layout -->
-<div id="wrapper">
+<div id="main-content-wrapper">
   <!-- start: Container -->
   <div class="container-fluid">
     

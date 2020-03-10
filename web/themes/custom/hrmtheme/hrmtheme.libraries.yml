@@ -27,7 +27,7 @@ font-awesome:
   version: 4.7.0
   license:
     name: MIT
-    url: http://fontawesome.io/license/
+    url: https://fontawesome.com/license/free
     gpl-compatible: true
   css:
     theme:

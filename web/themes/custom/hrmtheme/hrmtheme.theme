@@ -73,6 +73,21 @@ function hrmtheme_preprocess_page(&$variables) {
   $variables['linkedin_url'] = theme_get_setting('linkedin_url');
   $variables['ytube_url'] = theme_get_setting('ytube_url');
   $variables['show_credit_link'] = theme_get_setting('show_credit_link');
+
+  // Home page banner elements
+  if ($variables['is_front']) {
+    $config = \Drupal::config('content_management_configs.settings');
+
+    $fid = $config->get('content_management_configs.home_banner_bg');
+    $fid_number = (int) $fid['0'];
+    $file = \Drupal\file\Entity\File::load($fid_number);
+    if (!empty($file)) {
+      $file_uri = $file->getFileUri();
+      $image_path = file_url_transform_relative(file_create_url($file_uri));
+      $variables['home_banner_bg'] = $image_path;
+    }
+  }
+
 }
 
 /**
@@ -151,6 +166,23 @@ function hrmtheme_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#default_value' => theme_get_setting('show_credit_link'),
   ];
 
+}
+
+/**
+ * Implements hook_preprocess_block().
+ * @param $variables
+ */
+function hrmtheme_preprocess_block(&$variables) {
+
+
+  if ($variables['plugin_id'] == 'home_banner') {
+    $config = \Drupal::config('content_management_configs.settings');
+
+    $variables['banner_subheading'] = $config->get('content_management_configs.banner_subheading');
+    $variables['banner_title'] = $config->get('content_management_configs.banner_title');
+    $variables['banner_desc'] = $config->get('content_management_configs.banner_desc');
+    
+  }
 }
 
 /**
