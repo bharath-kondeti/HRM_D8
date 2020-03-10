@@ -1,0 +1,11 @@
+example_thing: ttt
+other_things: gggg
+home_banner: ''
+content_management_configs:
+  example_value1: null
+  example_value2: kirany
+  home_banner_bg:
+    - '32'
+  banner_subheading: 'Welcome to Lorem ipsum'
+  banner_title: 'Pellentesque in ipsum dapibus'
+  banner_desc: 'Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.'

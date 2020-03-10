@@ -1,0 +1,30 @@
+uuid: c8ec58b5-cc52-462f-bbdf-2b87d98e64a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - content_management_configs
+    - system
+  theme:
+    - hrmtheme
+third_party_settings:
+  block_class:
+    classes: col-md-6
+id: homebanner
+theme: hrmtheme
+region: banner
+weight: -8
+provider: null
+plugin: home_banner
+settings:
+  id: home_banner
+  label: 'Home Banner'
+  provider: content_management_configs
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
