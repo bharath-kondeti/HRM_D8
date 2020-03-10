@@ -1,0 +1,28 @@
+uuid: bf3e4a4c-8809-46b2-91af-0c6a2110fd9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_athor
+    - node.type.article
+id: node.article.field_athor
+field_name: field_athor
+entity_type: node
+bundle: article
+label: Athor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

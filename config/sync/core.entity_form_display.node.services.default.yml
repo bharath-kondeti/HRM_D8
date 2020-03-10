@@ -1,80 +1,66 @@
-uuid: 1a89f729-87c7-4465-9963-328f045b6eff
+uuid: 14fff797-57f5-4725-88f5-53ab20024156
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.body
-    - field.field.node.article.comment
-    - field.field.node.article.field_athor
-    - field.field.node.article.field_image
-    - field.field.node.article.field_tags
+    - field.field.node.services.body
+    - field.field.node.services.field_brief_description
+    - field.field.node.services.field_service_icon
+    - field.field.node.services.field_service_image
     - image.style.thumbnail
-    - node.type.article
+    - node.type.services
   module:
-    - comment
     - image
     - path
     - text
-_core:
-  default_config_hash: 6VUXB1jTUjK5zjkfMa2Kd2WW4sFUlgfBlfJSx01qLpU
-id: node.article.default
+id: node.services.default
 targetEntityType: node
-bundle: article
+bundle: services
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 1
-    region: content
+    weight: 10
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
     region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_athor:
-    weight: 121
+  field_brief_description:
+    weight: 7
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: string_textfield
     region: content
-  field_image:
-    type: image_image
-    weight: 4
+  field_service_icon:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
+  field_service_image:
+    weight: 8
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 3
+    type: image_image
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -82,21 +68,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 3
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 6
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 4
     region: content
     third_party_settings: {  }
   title:
@@ -109,12 +95,12 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
-    region: content
+    weight: 1
     settings:
       match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
+      match_limit: 10
+    region: content
     third_party_settings: {  }
 hidden: {  }
