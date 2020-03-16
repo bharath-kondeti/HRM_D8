@@ -1,0 +1,36 @@
+uuid: 57d4adf5-b868-492b-8616-2f221a19df9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.email_groups.body
+    - field.field.node.email_groups.field_bcc_email_addresses
+    - field.field.node.email_groups.field_cc_email_addresses
+    - field.field.node.email_groups.field_to_email_addresses
+    - node.type.email_groups
+  module:
+    - text
+    - user
+id: node.email_groups.teaser
+targetEntityType: node
+bundle: email_groups
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_bcc_email_addresses: true
+  field_cc_email_addresses: true
+  field_to_email_addresses: true

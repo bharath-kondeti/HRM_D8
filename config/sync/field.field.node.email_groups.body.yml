@@ -1,0 +1,23 @@
+uuid: c747948e-1b0e-4475-9934-6d40f2411600
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.email_groups
+  module:
+    - text
+id: node.email_groups.body
+field_name: body
+entity_type: node
+bundle: email_groups
+label: Body
+description: 'Use this field for describing about this Email Group.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

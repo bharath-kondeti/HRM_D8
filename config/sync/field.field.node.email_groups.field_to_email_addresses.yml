@@ -1,0 +1,19 @@
+uuid: 4360dac5-d896-4ba3-a93e-1835434214b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_to_email_addresses
+    - node.type.email_groups
+id: node.email_groups.field_to_email_addresses
+field_name: field_to_email_addresses
+entity_type: node
+bundle: email_groups
+label: 'To Email Addresses'
+description: 'Please enter comma separated email addresses.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
