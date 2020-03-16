@@ -1,0 +1,18 @@
+uuid: 8c727f56-171b-49d1-9141-093f07c1e25a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.email_groups
+id: node.email_groups.title
+field_name: title
+entity_type: node
+bundle: email_groups
+label: 'Email Group Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

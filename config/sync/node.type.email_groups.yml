@@ -1,4 +1,4 @@
-uuid: cc4d6a75-b290-4e4d-b3f3-3905d83321fc
+uuid: 8162bf7c-53fc-499c-ba7f-5bb041da6233
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: Services
-type: services
-description: 'Use this content type for showcasing the services offered on our website.'
-help: ''
+name: 'Email Groups'
+type: email_groups
+description: 'Use this content type for setting up the group emails.'
+help: 'Please enter unique Email Group Name.'
 new_revision: true
 preview_mode: 1
 display_submitted: true

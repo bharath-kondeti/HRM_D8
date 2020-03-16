@@ -1,0 +1,19 @@
+uuid: 615b8e55-44dd-48bf-92e5-7d7e0fd8a227
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cc_email_addresses
+    - node.type.email_groups
+id: node.email_groups.field_cc_email_addresses
+field_name: field_cc_email_addresses
+entity_type: node
+bundle: email_groups
+label: 'CC Email Addresses'
+description: 'Please enter comma separated email addresses.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

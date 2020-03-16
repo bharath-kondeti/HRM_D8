@@ -1,0 +1,19 @@
+uuid: 18029351-22c0-4edb-a0d0-83605ad838f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bcc_email_addresses
+    - node.type.email_groups
+id: node.email_groups.field_bcc_email_addresses
+field_name: field_bcc_email_addresses
+entity_type: node
+bundle: email_groups
+label: 'Bcc Email Addresses'
+description: 'Please enter comma separated email addresses.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

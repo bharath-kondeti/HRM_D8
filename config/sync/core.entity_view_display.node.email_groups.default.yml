@@ -1,0 +1,52 @@
+uuid: 31755517-77e9-478a-94f3-abcdec07e3ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.email_groups.body
+    - field.field.node.email_groups.field_bcc_email_addresses
+    - field.field.node.email_groups.field_cc_email_addresses
+    - field.field.node.email_groups.field_to_email_addresses
+    - node.type.email_groups
+  module:
+    - text
+    - user
+id: node.email_groups.default
+targetEntityType: node
+bundle: email_groups
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_bcc_email_addresses:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_cc_email_addresses:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_to_email_addresses:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
