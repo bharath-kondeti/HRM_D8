@@ -11,7 +11,7 @@ _core:
 id: hrmtheme_content
 theme: hrmtheme
 region: content
-weight: 2
+weight: -10
 provider: null
 plugin: system_main_block
 settings:

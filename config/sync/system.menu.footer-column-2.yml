@@ -1,0 +1,8 @@
+uuid: 4d193b7c-6efa-45ed-afde-fcfb35d5da36
+langcode: en
+status: true
+dependencies: {  }
+id: footer-column-2
+label: Company
+description: 'Footer Column 2'
+locked: false

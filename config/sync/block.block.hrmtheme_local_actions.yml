@@ -9,7 +9,7 @@ _core:
 id: hrmtheme_local_actions
 theme: hrmtheme
 region: optional_blocks
-weight: 1
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

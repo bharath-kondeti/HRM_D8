@@ -1,0 +1,10 @@
+uuid: 3a6138cc-0a4e-4868-b2b9-3bf5811e3eee
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.slab
+label: slab
+targetEntityType: node
+cache: true

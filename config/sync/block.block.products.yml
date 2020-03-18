@@ -1,26 +1,28 @@
-uuid: ca319539-4810-4b2d-87f2-205d432dfc59
+uuid: 3c9811e8-6616-4791-990f-ff3fa600d07b
 langcode: en
 status: true
 dependencies:
   config:
     - system.menu.footer
   module:
+    - block_class
     - system
   theme:
     - hrmtheme
-_core:
-  default_config_hash: x9OxXc4IBx11QNHSR309zWnkjgRFrCAdIuXF1RnGg4E
-id: hrmtheme_footer
+third_party_settings:
+  block_class:
+    classes: footer-column-menu
+id: products
 theme: hrmtheme
-region: optional_blocks
-weight: -8
+region: footer_top_one
+weight: 0
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
   id: 'system_menu_block:footer'
-  label: 'Footer menu'
+  label: Products
   provider: system
-  label_display: '0'
+  label_display: visible
   level: 1
   depth: 0
   expand_all_items: false

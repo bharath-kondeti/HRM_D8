@@ -12,8 +12,8 @@ _core:
   default_config_hash: XwmLnGOu52mcEPwngf8tLpt2i3B9UGuESdTtTycfSNE
 id: hrmtheme_main_menu
 theme: hrmtheme
-region: primary_menu
-weight: 10
+region: optional_blocks
+weight: -4
 provider: null
 plugin: 'system_menu_block:main'
 settings:
