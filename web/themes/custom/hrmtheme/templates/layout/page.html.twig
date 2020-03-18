@@ -68,7 +68,7 @@
 >
   <nav class="navbar topnav navbar-default" role="navigation">
     <div class="container">
-      <div class="row">
+      <div class="row branding-area">
         <div class="w1340">
           <div class="navbar-header col-md-5">
             {% if page.header %}
@@ -236,63 +236,59 @@
 </div>
 <!-- End layout -->
 
-<!-- Start Footer -->
+<!-- #footer-bottom -->
+<div class="footer-wrapper">
+  <a class="scrollUp"><i class="fa fa-angle-up"></i></a>
+  <!-- Start Footer -->
   {% if page.footer_top_one or page.footer_top_two or page.footer_top_three or page.footer_top_four %}
     <div class="footer-widgets-wrapper">
-    <div class="footer-widgets">
-      <!-- Start Container -->
-      <div class="container">
+      <div class="footer-widgets">
+        <!-- Start Container -->
+        <div class="container">
+          <div class="row">
+
+            <!-- Start Footer Top One Region -->
+            {% if page.footer_top_one %}
+              <div class = {{ footer_top_class }}>
+                {{ page.footer_top_one }}
+              </div>
+            {% endif %}
+            <!-- End Footer Top One Region -->
+
+            <!-- Start Footer Top Two Region -->
+            {% if page.footer_top_two %}
+              <div class = {{ footer_top_class }}>
+                {{ page.footer_top_two }}
+              </div>
+            {% endif %}
+            <!-- End Footer Top Two Region -->
+
+            <!-- Start Footer Top Three Region -->
+            {% if page.footer_top_three %}
+              <div class = {{ footer_top_class }}>
+                {{ page.footer_top_three }}
+              </div>
+            {% endif %}
+            <!-- End Footer Top Three Region -->
         
-        <div class="row">
-
-          <!-- Start Footer Top One Region -->
-          
-          {% if page.footer_top_one %}
+            <!-- Start Footer Top Four Region -->
+            {% if page.footer_top_four %}
             <div class = {{ footer_top_class }}>
-              {{ page.footer_top_one }}
+              {{ page.footer_top_four }}
             </div>
-          {% endif %}
-          
-          <!-- End Footer Top One Region -->
+            {% endif %}
+            <!-- End Footer Top Four Region -->
 
-          <!-- Start Footer Top Two Region -->
-          {% if page.footer_top_two %}
-            <div class = {{ footer_top_class }}>
-              {{ page.footer_top_two }}
-            </div>
-          {% endif %}
-          
-          <!-- End Footer Top Two Region -->
-
-          <!-- Start Footer Top Three Region -->
-          
-          {% if page.footer_top_three %}
-            <div class = {{ footer_top_class }}>
-              {{ page.footer_top_three }}
-            </div>
-          {% endif %}
-          
-          <!-- End Footer Top Three Region -->
-		  
-		  <!-- Start Footer Top Four Region -->
-
-          {% if page.footer_top_four %}
-          <div class = {{ footer_top_class }}>
-            {{ page.footer_top_four }}
           </div>
-          {% endif %}
-		  
-		  <!-- End Footer Top Four Region -->
-
         </div>
       </div>
     </div>
-    </div>
   {% endif %}
+
   <!-- Footer Region-->
   {% if page.footer %}
-  <div class="footer-space-wrapper">
-    <div class="footer-space">
+  <div class="footer-bottom-space-wrapper">
+    <div class="footer-bottom-space">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -300,25 +296,8 @@
           </div>
       </div>
       </div>
-	</div>
-</div>
+    </div>
+  </div>
   {% endif %}
-  <!-- End Footer Region-->
-<!--End Footer -->
-
-<!-- #footer-bottom -->
-<div class="footer-bottom-wrapper">
-<div id="footer-bottom">
-  <div class="container">
-    <div class="row">
-      <hr class="style-hrm">
-      <div id="toTop" class="col-md-12">
-        <a class="scrollUp"><i class="fa fa-angle-up"></i></a>
-      </div>
-    </div>
-    <div class="row">
-		  </div>
-    </div>
-</div>
 </div>
 <!-- #footer-bottom ends here -->

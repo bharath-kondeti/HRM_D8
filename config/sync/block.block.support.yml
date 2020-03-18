@@ -1,0 +1,29 @@
+uuid: 565ad9ff-2134-468d-bcbc-0bff1a731d85
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-column-3
+  module:
+    - block_class
+    - system
+  theme:
+    - hrmtheme
+third_party_settings:
+  block_class:
+    classes: footer-column-menu
+id: support
+theme: hrmtheme
+region: footer_top_three
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-column-3'
+settings:
+  id: 'system_menu_block:footer-column-3'
+  label: Support
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

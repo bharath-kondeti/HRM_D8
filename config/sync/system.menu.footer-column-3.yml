@@ -1,0 +1,8 @@
+uuid: bf6ba761-efa0-4c73-b84f-bb24f1907933
+langcode: en
+status: true
+dependencies: {  }
+id: footer-column-3
+label: Support
+description: 'Footer Column 3'
+locked: false

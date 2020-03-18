@@ -1,21 +1,22 @@
-uuid: 37c3c671-7a3b-4192-9bab-5d15f31ad966
+uuid: b4c47c86-2bd0-44de-8a3f-d6ffe8e8346a
 langcode: en
 status: true
 dependencies:
   module:
     - system
+    - user
   theme:
     - hrmtheme
-id: poweredbydrupal
+id: userlogin
 theme: hrmtheme
-region: footer
-weight: -11
+region: content
+weight: -9
 provider: null
-plugin: system_powered_by_block
+plugin: user_login_block
 settings:
-  id: system_powered_by_block
-  label: 'Powered by Drupal'
-  provider: system
+  id: user_login_block
+  label: 'Login to Explore'
+  provider: user
   label_display: visible
 visibility:
   request_path:
